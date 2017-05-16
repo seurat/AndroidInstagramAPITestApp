@@ -1,10 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"    
+    android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin">
 
-    <ImageView
+	<FrameLayout
+		android:id="@+id/gallery_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+
+	<ImageView
         android:id="@+id/iv_user"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -17,10 +23,10 @@
         android:layout_alignBottom="@+id/iv_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"        
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:orientation="vertical"
         android:gravity="center_vertical">
-        
+
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
@@ -29,24 +35,24 @@
         	android:textStyle="bold"
         	android:textSize="17sp"
         	android:text="Lorensius Londa"/>
-        
+
         <TextView
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
-        	android:layout_height="wrap_content"   
-        	android:layout_marginTop="@dimen/activity_vertical_margin"            	
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="@dimen/activity_vertical_margin"
         	android:text="lorensiuswlt"/>
-        
+
     </LinearLayout>
-    
+
     <Button
         android:id="@+id/btn_logout"
         android:layout_below="@+id/iv_user"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"        
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/text_signout" />
-    
+
     <RelativeLayout
         android:layout_below="@+id/btn_logout"
         android:layout_width="match_parent"
@@ -62,8 +68,8 @@
         	android:numColumns="2"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"/>
-    
-	    <ProgressBar
+
+		<ProgressBar
 		    style="?android:attr/progressBarStyleLarge"
 		    android:id="@+id/pb_loading"             
 		    android:layout_width="100dp" 

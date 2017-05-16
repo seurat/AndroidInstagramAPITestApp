@@ -1,34 +1,32 @@
 package com.gasbuddy.ranialjondi.androidthingexample;
 
 
-import java.util.ArrayList;
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
+import java.util.ArrayList;
 
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-
-import android.content.Context;
-
-public class PhotoListAdapter extends BaseAdapter {
+public class PhotoListRecyclerAdapter extends RecyclerView.Adapter<PhotoListRecyclerAdapter.ViewHolder> {
 	private Context mContext;
-	
+
 	private ImageLoader mImageLoader;
 	private MainActivity.AnimateFirstDisplayListener mAnimator;
-	
+
 	private ArrayList<String> mPhotoList;
-	
+
 	private int mWidth;
 	private int mHeight;
-	
-	public PhotoListAdapter(Context context) {
+
+	public PhotoListRecyclerAdapter(Context context) {
 		mContext = context;
 		
 		DisplayImageOptions displayOptions = new DisplayImageOptions.Builder()
@@ -59,7 +57,7 @@ public class PhotoListAdapter extends BaseAdapter {
 		mWidth 	= width;
 		mHeight = height;
 	}
-	
+	/*
 	@Override
 	public int getCount() {
 		return (mPhotoList == null) ? 0 : mPhotoList.size();
@@ -67,9 +65,30 @@ public class PhotoListAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-
-		Log.e("Click", "CLICK");
 		return null;
+	}
+	*/
+	public class ViewHolder extends RecyclerView.ViewHolder {
+
+		public View layoutView;
+		public ImageView imageView;
+		public String imageUrl;
+
+		public ViewHolder(View itemLayoutView) {
+			super(itemLayoutView);
+			layoutView = itemLayoutView;
+			imageView = (ImageView) itemLayoutView.findViewById(R.id.image);
+
+		}
+	}
+
+	@Override
+	public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		return null;
+	}
+
+	@Override
+	public void onBindViewHolder(ViewHolder holder, int position) {
 
 	}
 
@@ -79,6 +98,11 @@ public class PhotoListAdapter extends BaseAdapter {
 	}
 
 	@Override
+	public int getItemCount() {
+		return 0;
+	}
+/*
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ImageView imageIv;
 		
@@ -87,15 +111,14 @@ public class PhotoListAdapter extends BaseAdapter {
 			
 			imageIv.setLayoutParams(new GridView.LayoutParams(mWidth, mHeight));
             imageIv.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-			imageIv.setPadding(0, 0, 0, 0);
-
+            imageIv.setPadding(0, 0, 0, 0); 
 		} else {
 			imageIv = (ImageView) convertView;
 		}
 		
 		mImageLoader.displayImage(mPhotoList.get(position), imageIv, mAnimator);
-
-
+		
 		return imageIv;
 	}
+	*/
 }

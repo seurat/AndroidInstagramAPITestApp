@@ -19,7 +19,8 @@ public final class R {
         public static int icon=0x7f020001;
     }
     public static final class id {
-        public static int action_settings=0x7f080000;
+        public static int action_settings=0x7f080001;
+        public static int image_container=0x7f080000;
     }
     public static final class layout {
         public static int activity_main=0x7f030000;

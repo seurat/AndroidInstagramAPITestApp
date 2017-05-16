@@ -29,7 +29,9 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -67,31 +69,43 @@ public class MainActivity extends Activity {
 		mInstagram  		= new Instagram(this, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 		
 		mInstagramSession	= mInstagram.getSession();
-		
+
 		if (mInstagramSession.isActive()) {
-			setContentView(R.layout.activity_user);
-			
+		//gallery fragment
 			InstagramUser instagramUser = mInstagramSession.getUser();
-			
+
+			setContentView(R.layout.activity_user);
+
 			mLoadingPb 	= (ProgressBar) findViewById(R.id.pb_loading);
 			mGridView	= (GridView) findViewById(R.id.gridView);
-			
+			mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					getFragmentManager().beginTransaction()
+							.add(R.id.gallery_container,
+									GalleryFragment.newInstance(),
+									GalleryFragment.FRAGMENT_TAG)
+							.addToBackStack(GalleryFragment.FRAGMENT_TAG)
+							.commit();
+
+				}
+			});
 			((TextView) findViewById(R.id.tv_name)).setText(instagramUser.fullName);
 			((TextView) findViewById(R.id.tv_username)).setText(instagramUser.username);
-			
-			((Button) findViewById(R.id.btn_logout)).setOnClickListener(new View.OnClickListener() {				
+
+			((Button) findViewById(R.id.btn_logout)).setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
 					mInstagramSession.reset();
-					
+
 					startActivity(new Intent(MainActivity.this, MainActivity.class));
-					
+
 					finish();
 				}
 			});
-			
+
 			ImageView userIv = (ImageView) findViewById(R.id.iv_user);
-			
+
 			DisplayImageOptions displayOptions = new DisplayImageOptions.Builder()
 					.showImageOnLoading(R.drawable.ic_user)
 					.showImageForEmptyUri(R.drawable.ic_user)
@@ -108,14 +122,16 @@ public class MainActivity extends Activity {
 		
 			ImageLoader imageLoader = ImageLoader.getInstance();
 			imageLoader.init(config);
-			
+
 			AnimateFirstDisplayListener animate  = new AnimateFirstDisplayListener();
-			
+
 			imageLoader.displayImage(instagramUser.profilPicture, userIv, animate);
-			
+
 			new DownloadTask().execute();
 			
 		} else {
+
+			//fragment login
 			setContentView(R.layout.activity_main);
 			
 			((Button) findViewById(R.id.btn_connect)).setOnClickListener(new View.OnClickListener() {
@@ -302,6 +318,7 @@ public class MainActivity extends Activity {
         		
         		adapter.setData(photoList);
         		adapter.setLayoutParam(width, height);
+
         	
         		mGridView.setAdapter(adapter);
         	}
