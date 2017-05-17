@@ -81,7 +81,7 @@ public class PhotoFragment extends Fragment {
         int likesCount = bundle.getInt("likes");
 
         ((TextView)(mView.findViewById(R.id.tv_image_likes))).setText(mView.getResources().
-                getText(R.string.likes_count_concat, likesCount+""));
+                getString(R.string.like_count_format_string, likesCount+""));
 
         return mView;
     }

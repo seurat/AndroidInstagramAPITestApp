@@ -6,7 +6,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.gasbuddy.ranialjondi.androidthingexample"
+        applicationId "com.gasbuddy.ranialjondi.androidtestapp"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

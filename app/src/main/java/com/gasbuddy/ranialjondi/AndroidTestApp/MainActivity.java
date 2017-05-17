@@ -206,24 +206,12 @@ public class MainActivity extends Activity {
 				mImageList = photoList;
 			}
 
-			GalleryFragment galleryFragment = new GalleryFragment();
-			galleryFragment.getView().setOnKeyListener( new View.OnKeyListener()
-			{
-				@Override
-				public boolean onKey( View v, int keyCode, KeyEvent event )
-				{
-					if( keyCode == KeyEvent.KEYCODE_BACK )
-					{
-						finish();
-					}
-					return false;
-				}
-			} );
 
 			getFragmentManager()
 					.beginTransaction()
 					.replace(R.id.gallery_container,
-							galleryFragment)
+							GalleryFragment.newInstance(),
+							GalleryFragment.FRAGMENT_TAG)
 					.addToBackStack(GalleryFragment.FRAGMENT_TAG)
 					.commit();
 

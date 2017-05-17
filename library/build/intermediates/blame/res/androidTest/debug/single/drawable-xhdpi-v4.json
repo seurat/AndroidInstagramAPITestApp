@@ -1,18 +1,10 @@
 [
     {
-        "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
-    },
-    {
         "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/icon.png",
         "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/icon.png"
     },
     {
         "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_launcher.png",
         "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/icon.png",
-        "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/icon.png"
     }
 ]
