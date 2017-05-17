@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_launcher.png"
+    },
+    {
         "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_launcher.png",
         "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_launcher.png"
     }

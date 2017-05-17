@@ -3,7 +3,7 @@
  * Android-Universal-Image-Loader by nostra13
  */
 
-package com.gasbuddy.ranialjondi.androidthingexample;
+package com.gasbuddy.ranialjondi.AndroidTestApp;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,7 +30,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;

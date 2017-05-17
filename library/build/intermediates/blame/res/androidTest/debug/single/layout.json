@@ -2,5 +2,9 @@
     {
         "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/res/merged/androidTest/debug/layout/activity_main.xml",
         "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidThingExample/library/build/intermediates/bundles/debug/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/res/merged/androidTest/debug/layout/activity_main.xml",
+        "source": "/Users/ranialjondi/AndroidStudioProjects/AndroidTestApp/library/build/intermediates/bundles/debug/res/layout/activity_main.xml"
     }
 ]

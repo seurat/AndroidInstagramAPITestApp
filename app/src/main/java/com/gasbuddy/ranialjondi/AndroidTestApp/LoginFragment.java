@@ -1,7 +1,6 @@
-package com.gasbuddy.ranialjondi.androidthingexample;
+package com.gasbuddy.ranialjondi.AndroidTestApp;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.gasbuddy.ranialjondi.androidthingexample;
+package com.gasbuddy.ranialjondi.AndroidTestApp;
 
 import org.junit.Test;
 

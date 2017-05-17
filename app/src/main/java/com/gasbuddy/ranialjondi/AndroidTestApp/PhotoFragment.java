@@ -1,7 +1,6 @@
-package com.gasbuddy.ranialjondi.androidthingexample;
+package com.gasbuddy.ranialjondi.AndroidTestApp;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +12,6 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 /**
  * Created by ranialjondi on 5/16/17.

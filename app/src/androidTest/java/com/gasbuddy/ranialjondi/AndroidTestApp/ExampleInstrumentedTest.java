@@ -1,4 +1,4 @@
-package com.gasbuddy.ranialjondi.androidthingexample;
+package com.gasbuddy.ranialjondi.AndroidTestApp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

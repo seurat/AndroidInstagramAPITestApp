@@ -32,6 +32,7 @@ public final class R {
         public static int action_settings=0x7f060000;
         public static int app_name=0x7f060001;
         public static int hello_world=0x7f060002;
+        public static int likes_count_concat=0x7f060003;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
