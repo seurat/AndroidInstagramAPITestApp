@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_vertical_margin">
+    android:padding="@dimen/activity_vertical_margin"
+	android:clickable="true">
 
 	<FrameLayout
 		android:id="@+id/gallery_container"
@@ -69,13 +70,6 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"/>
 
-		<ProgressBar
-		    style="?android:attr/progressBarStyleLarge"
-		    android:id="@+id/pb_loading"             
-		    android:layout_width="100dp" 
-		    android:layout_height="100dp"	    
-		    android:layout_centerInParent="true"/>
-    
     </RelativeLayout>
     
 </RelativeLayout>

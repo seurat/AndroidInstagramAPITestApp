@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,18 +7,19 @@
     android:background="#ffffff"
     android:padding="@dimen/activity_vertical_margin">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/instagram_logo" />
 
-    <Button
-        android:id="@+id/btn_connect"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"        
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/text_signin" />
-    
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+    <FrameLayout
+        android:id="@+id/gallery_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+    <FrameLayout
+        android:id="@+id/photo_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+</RelativeLayout>
